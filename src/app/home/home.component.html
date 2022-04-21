@@ -1,1 +1,37 @@
-<p>home works!</p>
+<div>
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    <div class="form-group">
+      <div class="switch-toggle switch-3 switch-candy">
+        <input id="on" name="state-d" value="on" [checked]="value === 'on'" type="radio"
+          (change)="onSelectionChange('on')">
+        <label for="on">ON</label>
+        <input id="na" name="state-d" value="na" [checked]="value === 'na'" type="radio" checked="checked"
+          (change)="onSelectionChange('na')">
+        <label for="na">N/A</label>
+        <input id="off" name="state-d" value="off" [checked]="value === 'off'" type="radio"
+          (change)="onSelectionChange('off')">
+        <label for="off">OFF</label>
+        <a></a>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- <div>
+  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+    <div class="form-group">
+
+      <div class="switch-toggle switch-3 switch-candy">
+        <ng-container #buttonIcon *ngFor="let option of options"><input type="radio" name="state-d" id="state-d"
+            [checked]="value === option.value" [value]="option.value" />
+          <label (click)="onSelectionChange(option.value)" for="{{option.id}}">{{option.id}}
+          </label>
+        </ng-container> <a></a>
+      </div>
+    </div>
+  </form>
+</div> -->
+
+<pre>
+  {{ value }}
+</pre>
