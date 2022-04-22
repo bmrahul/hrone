@@ -1,20 +1,31 @@
 <div>
-  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
-    <div class="form-group">
-      <div class="switch-toggle switch-3 switch-candy">
-        <input id="on" name="state-d" value="on" [checked]="value === 'on'" type="radio"
-          (change)="onSelectionChange('on')">
-        <label for="on">ON</label>
-        <input id="na" name="state-d" value="na" [checked]="value === 'na'" type="radio" checked="checked"
-          (change)="onSelectionChange('na')">
-        <label for="na">N/A</label>
-        <input id="off" name="state-d" value="off" [checked]="value === 'off'" type="radio"
-          (change)="onSelectionChange('off')">
-        <label for="off">OFF</label>
-        <a></a>
-      </div>
-    </div>
-  </form>
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="form-group">
+
+            <div class="pressed-bg">
+
+                <div class="switch-toggle switch-3 switch-candy" [ngClass]="{
+              na: switchtoggle == 'na',
+              on: switchtoggle == 'on',
+              off: switchtoggle == 'off'
+            }">
+
+                    <div class="tri-switch-wrap">
+                        <input id="off" name="state-d" value="off" [checked]="value === 'off'" type="radio" (change)="onSelectionChange('off')" [(ngModel)]="switchtoggle">
+                        <label for="off" class="for-off"><i class="fa fa-check"></i></label>
+                    </div>
+                    <div class="tri-switch-wrap">
+                        <input id="na" name="state-d" value="na" [checked]="value === 'na'" type="radio" checked="checked" (change)="onSelectionChange('na')" [(ngModel)]="switchtoggle">
+                        <label for="na"></label>
+                    </div>
+                    <div class="tri-switch-wrap">
+                        <input id="on" name="state-d" value="on" [checked]="value === 'on'" type="radio" (change)="onSelectionChange('on')" [(ngModel)]="switchtoggle">
+                        <label for="on"><i class="fa fa-times"></i></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 
 <!-- <div>

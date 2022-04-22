@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   model: any = {};
   value = "na";
+  switchtoggle: string = 'na';
 
   constructor() { }
 
@@ -25,7 +26,6 @@ export class HomeComponent implements OnInit {
   }
 
   onSelectionChange(entry: any) {
-    debugger
     this.value = entry;
   }
 }
