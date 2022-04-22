@@ -6,26 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  model: any = {};
-  value = "na";
-  switchtoggle: string = 'na';
-
+  value: any;
+  label = 'Is the coverage force placed ?';
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public options = [
-    { value: "on", id: "On" },
-    { value: "na", id: "NA" },
-    { value: "off", id: "Off" },
-  ]
-
-  onSubmit() {
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model))
-  }
-
-  onSelectionChange(entry: any) {
-    this.value = entry;
+  getToggleValue(event: string) {
+    this.value = event;
   }
 }
