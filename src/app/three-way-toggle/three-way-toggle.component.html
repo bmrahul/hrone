@@ -1,33 +1,32 @@
 <ng-container>
-  <div class="form-group">
-    <form>
-      <fieldset id="{{idValue}}">
-        <label>{{labelValue}}</label>
-        <div class="pressed-bg">
-          <div class="switch-toggle switch-3 switch-candy" [ngClass]="{
-          na: switchtoggle == 'na',
-          yes: switchtoggle == 'yes',
-          no: switchtoggle == 'no'
+    <div class="form-wrap">
+        <div class="form-group">
+            <form>
+                <fieldset id="{{idValue}}">
+                    <label>{{labelValue}}</label>
+                    <div class="pressed-bg">
+                        <div class="switch-toggle switch-3 switch-candy" [ngClass]="{
+                      na: switchtoggle == 'na',
+                      yes: switchtoggle == 'yes',
+                      no: switchtoggle == 'no'
         }">
-            <div class="tri-switch-wrap">
-              <input id="no" name="state-{{idValue}}" value="no" [checked]="value === 'no'" type="radio"
-                (change)="onSelectionChange('no')" [(ngModel)]="switchtoggle">
-              <label for="no" class="for-no"><i class="fa fa-check"></i></label>
-            </div>
-            <div class="tri-switch-wrap">
-              <input id="na" name="state-{{idValue}}" value="na" [checked]="value === 'na'" type="radio" checked="checked"
-                (change)="onSelectionChange('na')" [(ngModel)]="switchtoggle">
-              <label for="na"></label>
-            </div>
-            <div class="tri-switch-wrap">
-              <input id="yes" name="state-{{idValue}}" value="yes" [checked]="value === 'yes'" type="radio"
-                (change)="onSelectionChange('yes')" [(ngModel)]="switchtoggle">
-              <label for="yes"><i class="fa fa-times"></i></label>
-            </div>
-          </div>
+                            <div class="tri-switch-wrap">
+                                <input id="no" name="state-{{idValue}}" value="no" [checked]="value === 'no'" type="radio" (change)="onSelectionChange('no')" [(ngModel)]="switchtoggle">
+                                <label for="no" class="for-no"><i class="fa fa-check"></i></label>
+                            </div>
+                            <div class="tri-switch-wrap">
+                                <input id="na" name="state-{{idValue}}" value="na" [checked]="value === 'na'" type="radio" checked="checked" (change)="onSelectionChange('na')" [(ngModel)]="switchtoggle">
+                                <label for="na"></label>
+                            </div>
+                            <div class="tri-switch-wrap">
+                                <input id="yes" name="state-{{idValue}}" value="yes" [checked]="value === 'yes'" type="radio" (change)="onSelectionChange('yes')" [(ngModel)]="switchtoggle">
+                                <label for="yes"><i class="fa fa-times"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                    <pre>{{switchtoggle}}</pre>
+                </fieldset>
+            </form>
         </div>
-        <pre>{{switchtoggle}}</pre>
-      </fieldset>
-    </form>
-  </div>
+    </div>
 </ng-container>
