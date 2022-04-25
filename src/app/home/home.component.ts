@@ -6,14 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  value: any;
-  label = 'Is the coverage force placed ?';
+  coverageForce: any;
+  vacantLand: any;
+  label1 = 'Is the coverage force placed ?';
+  label2 = 'Is this vacant land ?';
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getToggleValue(event: string) {
-    this.value = event;
+  getCoverageForceValue(event: string) {
+    this.coverageForce = event;
+  }
+
+  getVacantLandValue(event: string) {
+    this.vacantLand = event;
   }
 }

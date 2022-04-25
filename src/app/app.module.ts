@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { ThreeWayToggleComponent } from './three-way-toggle/three-way-toggle.component';
+import { TogglerComponent } from './toggler/toggler.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ThreeWayToggleComponent } from './three-way-toggle/three-way-toggle.com
     AboutComponent,
     ContactComponent,
     HeaderComponent,
-    ThreeWayToggleComponent
+    ThreeWayToggleComponent,
+    TogglerComponent
   ],
   imports: [
     BrowserModule,
