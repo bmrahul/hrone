@@ -9,8 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
-import { ThreeWayToggleComponent } from './three-way-toggle/three-way-toggle.component';
 import { TogglerComponent } from './toggler/toggler.component';
+import { ThreeWayToggleModule } from 'three-way-toggle';
 
 @NgModule({
   declarations: [
@@ -19,14 +19,14 @@ import { TogglerComponent } from './toggler/toggler.component';
     AboutComponent,
     ContactComponent,
     HeaderComponent,
-    ThreeWayToggleComponent,
     TogglerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ThreeWayToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
